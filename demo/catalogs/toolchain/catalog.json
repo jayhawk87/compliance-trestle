@@ -1,0 +1,2555 @@
+{
+  "catalog": {
+    "uuid": "fc011a31-8958-445d-af4f-c6144b1ecb7c",
+    "metadata": {
+      "title": "Component Parameters",
+      "last-modified": "2021-06-01T13:19:34.000+00:00",
+      "version": "0.14.1",
+      "oscal-version": "1.0.0-rc2"
+    },
+    "params": [
+      {
+        "id": "ibm_minimum_password_length",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "e87b3e74-911a-47aa-a349-fa9768c2ea9f",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "ibmid_password_policy_min_length_characters"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "e89bcee5-478f-4897-bf84-779b5c3ef29e",
+            "value": "ibmid_password_policy_min_length_characters_check",
+            "class": "scc_check_name_id",
+            "remarks": "ibmid_password_policy_min_length_characters_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "d44f57ec-2ebb-4bb8-8d8d-772704621bb1",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "ibmid_password_policy_min_length_characters_check"
+          }
+        ],
+        "label": "Minimum Password Length",
+        "values": [
+          "12, [8]"
+        ]
+      },
+      {
+        "id": "ibm_password_reuse_prevention",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "e72ea2b7-18bb-4262-a66b-d0d64622bae5",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "ibmid_password_policy_not_reuse_below_min_count"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "641b8d35-3fca-4833-80de-183ba714ae34",
+            "value": "ibmid_password_policy_not_reuse_below_min_count_check",
+            "class": "scc_check_name_id",
+            "remarks": "ibmid_password_policy_not_reuse_below_min_count_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "604aa182-deb5-4357-bfb5-82e4bb48a0fb",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "ibmid_password_policy_not_reuse_below_min_count_check"
+          }
+        ],
+        "label": "Password Reuse Prevention",
+        "values": [
+          "24"
+        ]
+      },
+      {
+        "id": "allowed_admins_per_account",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "e9210854-2bad-4c72-9364-f3839a4e5981",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "iam_admin_role_users_per_account_maxcount"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "71ad2819-4110-4c4c-bb09-276b53c17745",
+            "value": "iam_admin_role_users_per_account_maxcount_check",
+            "class": "scc_check_name_id",
+            "remarks": "iam_admin_role_users_per_account_maxcount_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "c47dbdb6-b90b-437e-b4e7-15fdc47decb8",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "iam_admin_role_users_per_account_maxcount_check"
+          }
+        ],
+        "label": "Maximum allowed administrators per account",
+        "values": [
+          "10, []"
+        ]
+      },
+      {
+        "id": "api_keys_rotated_days",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "31002130-2605-4634-bf8a-fc43f889beb6",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "iam_api_keys_rotation_configured"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "f969f08d-35d7-4fd4-8f1a-53fadbd0ea30",
+            "value": "iam_api_keys_rotation_configured_check",
+            "class": "scc_check_name_id",
+            "remarks": "iam_api_keys_rotation_configured_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "4a25b89f-2739-4538-b567-20d1ec2a9fb4",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "iam_api_keys_rotation_configured_check"
+          }
+        ],
+        "label": "API Keys Rotated Days",
+        "values": [
+          "90, []"
+        ]
+      },
+      {
+        "id": "account_owner_last_login_days",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "12fc744e-b000-4dd7-9427-f34bfe468c9a",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "iam_account_owner_last_login"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "0df5e132-ea9a-41b7-90ea-732de71c9205",
+            "value": "iam_account_owner_last_login_check",
+            "class": "scc_check_name_id",
+            "remarks": "iam_account_owner_last_login_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "3e418647-dff7-4db9-9b08-606068d92117",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "iam_account_owner_last_login_check"
+          }
+        ],
+        "label": "Account Owner Last Login Days",
+        "values": [
+          "30, [90]"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_iam",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "1fa0825a-6072-4ded-81c7-ca25d15b038f",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "iam_admin_role__user_maxcount"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "d355b4e9-0bb6-4885-af4f-73e349b78177",
+            "value": "iam_admin_role__user_maxcount_check",
+            "class": "scc_check_name_id",
+            "remarks": "iam_admin_role__user_maxcount_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "199fe9c3-2ba6-4918-b2c8-d3e79f502971",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "iam_admin_role__user_maxcount_check"
+          }
+        ],
+        "label": "Maximum no of IAM user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_iam",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "4b1e63c2-0bc7-4cfd-bff5-60f71fb4b7f8",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "iam_admin_role_serviceid_maxcount"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "79f541a9-5439-4e9b-9871-a5bbe9d76091",
+            "value": "iam_admin_role_serviceid_maxcount_check",
+            "class": "scc_check_name_id",
+            "remarks": "iam_admin_role_serviceid_maxcount_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "9882e798-1266-45f8-8d42-8bf6713f53ae",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "iam_admin_role_serviceid_maxcount_check"
+          }
+        ],
+        "label": "Maximum no of IAM Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_cloudant_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "3d3d41c3-9f0b-4372-aa41-3b0894ddb3e3",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "cloudant_admin_role_user_maxcount"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "32091f1b-837a-4b7d-878c-355f92492328",
+            "value": "cloudant_admin_role_user_maxcount_check",
+            "class": "scc_check_name_id",
+            "remarks": "cloudant_admin_role_user_maxcount_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "9ca0fd35-f37c-40de-bf5d-df2ec865f9ab",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "cloudant_admin_role_user_maxcount_check"
+          }
+        ],
+        "label": "Maximum no of Cloudant DB user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_cloudant_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "bf5b66e8-1061-4ac7-ba5c-04cf51054230",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "cloudant_admin_role_serviceid_maxcount"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "6396b0b0-c87e-4790-94e2-108b7057ae2e",
+            "value": "cloudant_admin_role_serviceid_maxcount_check",
+            "class": "scc_check_name_id",
+            "remarks": "cloudant_admin_role_serviceid_maxcount_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "ddfdec7b-d69c-477d-9531-acbc1619ed45",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "cloudant_admin_role_serviceid_maxcount_check"
+          }
+        ],
+        "label": "Maximum no of Cloudant DB Service IDs administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "hpcs_crypto_units",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "47004d9c-b633-4e38-8e69-5264d71a3965",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000233"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "8634079a-2607-4093-86ee-0a7f0aae68b7",
+            "value": "3000233_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000233_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "6cb51f80-4778-4735-90a8-c01c9ed8b9af",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000233_check"
+          }
+        ],
+        "label": "Hyper Protect Crypto Units",
+        "values": [
+          "2, [3]"
+        ]
+      },
+      {
+        "id": "hpcs_rotation_policy",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "162abc9e-4d3f-4ca8-a4d1-4462decbea2c",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000235"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "d0a9b029-a0f3-475a-a459-8394882258e2",
+            "value": "3000235_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000235_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "d82ba620-f0e3-40fc-8560-69916afc5b1a",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000235_check"
+          }
+        ],
+        "label": "Hyper Protect Crypto Keys Rotation Policy",
+        "values": [
+          "1, [2,3,4,5,6,7,8,910]"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_redis_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "0d4ac563-feaf-4001-ad93-ad8f5e166cd3",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000242"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "8174d89e-124e-4489-bb5b-1770c3f28e0f",
+            "value": "3000242_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000242_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "eabc7fe8-c053-478b-8d9f-181cd5f5d984",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000242_check"
+          }
+        ],
+        "label": "Maximum no of Redis DB user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_postgresql_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "4ea20a75-3386-47b1-8769-9bf0e89a3de5",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000243"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "0a823980-4a8d-4df9-a34c-c5c27c58cc62",
+            "value": "3000243_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000243_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "77e2b7cb-0e40-4075-b418-ec80a1c7b28f",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000243_check"
+          }
+        ],
+        "label": "Maximum no of Postgresql DB user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_mongo_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "874eaab5-7fda-46dd-84b0-81beb6fe4bbb",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000244"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "067e42e0-d5fa-4b13-a9a8-469dd15add65",
+            "value": "3000244_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000244_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "89f118c0-18e3-4f8c-833e-571cbfee705d",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000244_check"
+          }
+        ],
+        "label": "Maximum no of Mongo DB user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_elastic_search_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "a56be5db-cec7-4190-be0e-24cfa9ea4aab",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000245"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "65351ff0-3246-42db-ab1d-d8b444ee8ee9",
+            "value": "3000245_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000245_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "41c7f26d-cbc9-452f-b85d-6e1b35c7c18d",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000245_check"
+          }
+        ],
+        "label": "Maximum no of Elastic Search DB user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_etcd_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "8c595bcc-5dfd-4c6e-aa98-a5bdef22a1f8",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000246"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "7286786e-4cbe-4e37-8891-bf436bc68476",
+            "value": "3000246_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000246_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "cf0bcce6-ed07-4811-a356-18c6d290efad",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000246_check"
+          }
+        ],
+        "label": "Maximum no of ETCD user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_key",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "c8a79dd9-0087-4892-aec2-14a67aa213e8",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000247"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "455bbfd9-7e84-4efe-b0ef-395f6336ae62",
+            "value": "3000247_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000247_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "6ad93522-3cae-4800-9eec-2276f48c340d",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000247_check"
+          }
+        ],
+        "label": "Maximum no of Key user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_kubernetes_container",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "5c9bac40-bfff-462d-a2ae-56e0eedc9c48",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000248"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "8284671d-f12c-4ed4-a6f5-28d85882edd7",
+            "value": "3000248_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000248_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "d8859650-ab7f-4524-aa8a-3958c1a86270",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000248_check"
+          }
+        ],
+        "label": "Maximum no of Kubernetes Container user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_enterprise_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "b4ddbe32-d857-40ec-bdfa-da56b6a32779",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000249"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "47fefd83-7ec9-4a0b-8721-2489bb269e1c",
+            "value": "3000249_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000249_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "3ec4d800-77e6-4ce9-9b8b-74397b352e7c",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000249_check"
+          }
+        ],
+        "label": "Maximum no of Enterprise DB user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_elastic_search_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "5a4ce44a-103b-4be6-b075-400c07b2dd7d",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000251"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "758902fe-0b7d-4d4e-92e6-b937a6954ce6",
+            "value": "3000251_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000251_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "4cf26db2-2e71-44ba-b63b-f2b5a529eec8",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000251_check"
+          }
+        ],
+        "label": "Maximum no of Elastic Search DB Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_key",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "173759d8-6a22-4059-9867-7d97f642d772",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000252"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "45c5279a-5e66-4dd7-b30b-9a7e197207d3",
+            "value": "3000252_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000252_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "59af9b4a-8d86-4979-998d-8df9c4e70729",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000252_check"
+          }
+        ],
+        "label": "Maximum no of Key Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_etcd_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "6166630b-691d-47a4-8869-a92b37dd2d70",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000253"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "dee519da-863b-4b5c-b49c-edcfc319c7ad",
+            "value": "3000253_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000253_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "d3f643a8-972e-41a2-8001-6f5d5c24be40",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000253_check"
+          }
+        ],
+        "label": "Maximum no of ETCD Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_kubernetes_container",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "2ba91b40-86e7-44f8-88ec-588f6cdb7e3a",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000254"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "ff9a1c9a-47a2-409f-860b-2623c999c607",
+            "value": "3000254_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000254_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "b5fb6701-6971-40a7-8bf5-28fc4d19a446",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000254_check"
+          }
+        ],
+        "label": "Maximum no of Kubernetes Container Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_enterprise_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "cb6c6bb4-3b76-4ffb-bf86-929021e6562a",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000255"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "e1f245ac-3b7f-433c-82c1-92094e43d38d",
+            "value": "3000255_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000255_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "6a19d3d4-2c83-4650-8df8-61e5179db035",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000255_check"
+          }
+        ],
+        "label": "Maximum no of Enterprise DB Service ID  administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_monitoring",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "29be5db9-a9c8-45ad-89b9-8974103c7206",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000304"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "723134f3-64db-4a30-bdff-ce674a9d6279",
+            "value": "3000304_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000304_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "18948e3c-9736-44d9-997f-df7cf39269a1",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000304_check"
+          }
+        ],
+        "label": "Maximum no of Monitoring user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_logdna",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "f4386823-663c-49ff-a71d-5c82953390b8",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000308"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "44187ee5-98ee-4c54-bc4d-9c4daa3606a7",
+            "value": "3000308_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000308_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "1d3dd1f8-244e-4c2c-9cf9-2405d0b57ae2",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000308_check"
+          }
+        ],
+        "label": "Maximum no of LogDNA user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_logdna",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "10bcd7be-1fcb-4669-9ef0-fa64abbd376d",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000309"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "7388f0c0-2264-4400-b1f4-2fac8fc3e404",
+            "value": "3000309_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000309_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "7b635e9a-9caf-4fb2-a715-b50d0f2cfcfb",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000309_check"
+          }
+        ],
+        "label": "Maximum no of LogDNA ServiceID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_monitoring",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "29ed627c-90e0-4312-aec8-715ae8c118f1",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000310"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "28a6c461-c1ac-4ad0-82f7-56d30f37a6af",
+            "value": "3000310_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000310_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "762b2e41-6b5c-4bda-8ad7-132c152fc8b7",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000310_check"
+          }
+        ],
+        "label": "Maximum no of Monitoring Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_mongo_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "54a5c6a5-606d-48b0-9114-ff9c4c1f1092",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000312"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "1df33db7-80d3-417f-ae0f-4ea5db9cb9c4",
+            "value": "3000312_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000312_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "bd97eee0-5efd-41e2-9f83-36cfea2606ef",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000312_check"
+          }
+        ],
+        "label": "Maximum no of Mongo DB Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_redis_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "7303cecc-bdcd-4783-b738-20ce50494642",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000313"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "9ed17501-8458-4165-847c-b8272b8faf6c",
+            "value": "3000313_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000313_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "688f969f-72df-4f6a-a79d-386ce6743989",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000313_check"
+          }
+        ],
+        "label": "Maximum no of Redis DB Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_postgresql_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "04e744d1-7134-430a-9904-dbcf6c733589",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000314"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "98a1be07-3986-4454-a135-48841117cdd7",
+            "value": "3000314_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000314_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "e8d65fea-c7b7-42ae-8a86-9d648f4bee25",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000314_check"
+          }
+        ],
+        "label": "Maximum no of Postgresql DB Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "ssh_port",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "5cb253a7-c952-4c1c-9b7d-b9a931b111c6",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000404"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "58b5fcd0-6c19-43b7-927b-736dfc6e2798",
+            "value": "3000404_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000404_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "18cf74e2-6c98-4260-956f-1835b51bf9c4",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000404_check"
+          }
+        ],
+        "label": "SSH Port",
+        "values": [
+          "22, []"
+        ]
+      },
+      {
+        "id": "rdp_port",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "f69340df-e2f6-4e2d-9c84-1f27dc78411f",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000405"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "ebbc123f-57ab-46ad-be17-af7a00d0e4b0",
+            "value": "3000405_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000405_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "5d7642d5-33bd-43a5-b87f-0e2912547cbc",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000405_check"
+          }
+        ],
+        "label": "RDP Port",
+        "values": [
+          "3389, []"
+        ]
+      },
+      {
+        "id": "iks_ingress_tls_versions",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "a957d6eb-9ad7-489c-b2a3-f21e04e67628",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000409"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "67fcc11b-1e5a-43db-afc7-74e1a9f8d3fa",
+            "value": "3000409_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000409_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "2fe32b2f-e866-4c93-b527-e85fdddc2ad3",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000409_check"
+          }
+        ],
+        "label": "tlsVersion",
+        "values": [
+          "1.2 , [1.3]"
+        ]
+      },
+      {
+        "id": "diffie_hellman_group",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "8b69942b-ab9d-47e8-a200-115671c002e7",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000421"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "763d4681-43e4-4f0c-b265-7b309ba0cf3d",
+            "value": "3000421_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000421_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "2433ec1a-0f52-49e0-b893-d6cd58abf4e5",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000421_check"
+          }
+        ],
+        "label": "Diffie-Hellman Group",
+        "values": [
+          "14"
+        ]
+      },
+      {
+        "id": "pre_shared_key",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "be4aaded-2da6-45d6-a0f8-0590c6b39653",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000425"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "0e503c88-715a-4afd-b2ad-3cf4589ed79b",
+            "value": "3000425_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000425_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "c7ad57a8-6d75-43cd-b00f-16d6708c0831",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000425_check"
+          }
+        ],
+        "label": "Pre-Shared Key",
+        "values": [
+          "24, []"
+        ]
+      },
+      {
+        "id": "dns_port",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "6adb913e-ac71-4f90-a29f-77d4060fd4ae",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000444"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "0b5668ef-1fc3-4f32-8b4a-02918417ce31",
+            "value": "3000444_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000444_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "8f6b4ba5-94a5-4159-98f5-885d1542f64d",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000444_check"
+          }
+        ],
+        "label": "DNS Port",
+        "values": [
+          "53, []"
+        ]
+      },
+      {
+        "id": "vm_nic_count",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "ff926ce2-7621-4e06-b18f-6455cc0c9c29",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000453"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "ff63a93f-42f2-4bf9-85a0-1c45228d8885",
+            "value": "3000453_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000453_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "31e9348b-70c3-4efe-a67c-7cbb86befb50",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000453_check"
+          }
+        ],
+        "label": "VM NIC Count",
+        "values": [
+          "1, []"
+        ]
+      },
+      {
+        "id": "scan_interval_max",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "74cacd61-1e87-4e6d-9703-f546a01ccf9d",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000601"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "fcac0bee-91a6-44c0-854b-3788ecf51840",
+            "value": "3000601_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000601_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "52ccf201-3025-486f-bfa6-f6183079f3ad",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000601_check"
+          }
+        ],
+        "label": "Max Scan Interval Days",
+        "values": [
+          "7, [10, 30]"
+        ]
+      },
+      {
+        "id": "arbitrary_keys_rotated_days",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "ac49c2b5-5c28-4b9e-8e59-1cd1f79b9cd9",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000617"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "2587877a-dd25-4078-9e3a-ec674ac2d9cf",
+            "value": "3000617_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000617_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "a61836c2-eab4-401a-9c45-23a209ff0b74",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000617_check"
+          }
+        ],
+        "label": "Arbitrary Keys Rotated Days",
+        "values": [
+          "90, []"
+        ]
+      },
+      {
+        "id": "username_password_keys_rotated_days",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "0d5d66e0-3af4-47da-9791-312574e7aee3",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000618"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "42ca2418-0bcd-4148-9555-adcff2cdfa5b",
+            "value": "3000618_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000618_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "a721adb9-36bc-4c4b-a8fa-d3c3ecbabc79",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000618_check"
+          }
+        ],
+        "label": "IAM credentials Keys Rotated Days",
+        "values": [
+          "90, []"
+        ]
+      },
+      {
+        "id": "iam_credentials_keys_rotated_days",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "0018d10d-1e09-4dd0-9a8a-c60b128b0cad",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000619"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "0cbd2fe2-4720-40fa-af71-75b1b67b0f53",
+            "value": "3000619_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000619_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "627243d7-1a2e-4deb-b117-5065c6e74f16",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000619_check"
+          }
+        ],
+        "label": "maxAPIKeyAge",
+        "values": [
+          "90, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_secrets_manager",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "e77cbc59-1c11-4870-bf56-e666e48678f7",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000621"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "26dd093c-0194-4d2e-9d85-cc37ea5cb304",
+            "value": "3000621_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000621_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "da99d278-4908-4770-a4e5-ce73a130fa9b",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000621_check"
+          }
+        ],
+        "label": "Maximum no of Secrets Manager user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_toolchain",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "cd48e898-96ec-43ba-a5bf-9194b05e585c",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000622"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "7e0eb2b9-e2be-44c8-925f-3c9f56360a66",
+            "value": "3000622_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000622_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "d8579577-3922-4744-be67-fa9244de8abc",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000622_check"
+          }
+        ],
+        "label": "Maximum no of Toolchain user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_admins_for_container_registry",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "4f316963-3111-46da-84d5-8b5670ad748e",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000623"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "372724f4-3ade-4c68-be8a-af2e1c0344f5",
+            "value": "3000623_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000623_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "8b9e3c90-9a14-4780-a7a5-f30f2a5f56a3",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000623_check"
+          }
+        ],
+        "label": "Maximum no of Kubernetes Container user administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_container_registry",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "68302e50-52f8-496c-9a00-91b78c68fabd",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000628"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "97af7a8f-fce8-4010-bef7-47c94c87d00a",
+            "value": "3000628_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000628_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "15e6bd67-791b-4e1d-a97d-ba525b982d6d",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000628_check"
+          }
+        ],
+        "label": "Maximum no of Kubernetes Container Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_tool_chain",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "0d9aa031-1f45-44f9-82fd-02de4a74bdfd",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000629"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "4bb96e61-f3ef-470f-90fb-ba3aeee8344b",
+            "value": "3000629_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000629_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "afdc6326-2cb9-4db6-962a-8cde59dbf999",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000629_check"
+          }
+        ],
+        "label": "Maximum no of Toolchain Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_admins_for_secrets_manager",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "7debe522-c509-4b62-acf7-473929ef8956",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000630"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "63f7a5e2-82af-4df4-881d-c6cab012e2a7",
+            "value": "3000630_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000630_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "799960c0-1eb6-4494-a241-34b97784b2e4",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000630_check"
+          }
+        ],
+        "label": "Maximum no of Secrets Manager Service ID administrators",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "access_tokens_expire",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "7d344cb9-607f-4794-8535-9920a1a0092b",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000724"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "d44b0a9d-0c38-418b-bf9e-f58b6c4310e7",
+            "value": "3000724_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000724_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "ce2ebb23-d9c8-47c8-a7f8-5e215278a3a6",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000724_check"
+          }
+        ],
+        "label": "Access Tokens Expire Minutes",
+        "values": [
+          "120, []"
+        ]
+      },
+      {
+        "id": "ssh_port",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "dc65adff-1a48-4e70-bc31-e227e886a8e8",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000441"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "9d156975-ea21-4922-8dd4-6e45cd508161",
+            "value": "3000441_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000441_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "3d0b020b-3df8-4c9f-9456-713928ef3004",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000441_check"
+          }
+        ],
+        "label": "SSH Port",
+        "values": [
+          "22"
+        ]
+      },
+      {
+        "id": "rdp_port",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "7b227b9e-8388-4e83-b4a6-7354795714e5",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000442"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "48ff1e35-2deb-4709-9e6e-1ce340507f95",
+            "value": "3000442_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000442_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "c4f23eb8-1bc2-4a65-a832-1b07a27f9a32",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000442_check"
+          }
+        ],
+        "label": "RDP Port",
+        "values": [
+          "3389"
+        ]
+      },
+      {
+        "id": "iam_service_ids_max_count",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "77ad28bb-5b39-4187-a064-301fb3b98f7a",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000038"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "7933c804-4d70-420a-bb8e-faf8573f7860",
+            "value": "3000038_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000038_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "7bc5607e-37fd-4784-ab51-d95e75f82c23",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000038_check"
+          }
+        ],
+        "label": "Maximum allowed service ID with admin privilege per account",
+        "values": [
+          "10, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_iam",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "d7b05f7a-126b-4c21-bd33-adfd1a550d74",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000033"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "89417ba0-fe94-4ac3-8c41-e0fcee75f470",
+            "value": "3000033_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000033_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "8e39966c-8740-403f-bc32-622e07a0afe5",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000033_check"
+          }
+        ],
+        "label": "Minimum no of IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_iam",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "d5aca174-1e46-433f-b14d-fa8e088e25bf",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000034"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "66f9f0a5-3c71-44b1-a8e6-33792bc94f55",
+            "value": "3000034_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000034_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "57721118-df85-4bfc-8904-1c14d07bde7d",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000034_check"
+          }
+        ],
+        "label": "Minimum no of IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_cloudant_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "cd635ce4-1a83-4b29-83f2-5bc0f365f567",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000111"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "7413bdd6-e1f1-4984-ab72-8f2365df2cd3",
+            "value": "3000111_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000111_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "ec4e5c48-7dd8-4d33-b6f2-dcd99b8615b7",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000111_check"
+          }
+        ],
+        "label": "Minimum no of Cloudant database IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_cloudant_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "b69e6c0f-ab26-46c4-9d69-597ebc1f998d",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000112"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "7061332b-9344-4e88-9bc8-ae4b6fe03e9b",
+            "value": "3000112_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000112_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "273b466d-2aee-42de-8b3d-03b04e82db66",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000112_check"
+          }
+        ],
+        "label": "Minimum no of Cloudant database IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_redis_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "9fc1dd49-6b4c-46ea-8e20-9c33ab7fecce",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000256"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "d48a4355-f1da-4dc0-96b5-1b2fdb721d13",
+            "value": "3000256_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000256_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "cfb2e18f-152b-40c9-80c6-eaafa4e703d5",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000256_check"
+          }
+        ],
+        "label": "Minimum no of Redis databases IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_redis_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "a0a7f28f-8545-4364-81c5-f4abebeedf69",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000257"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "6dd8c63f-855a-4bc8-9e24-d825e2d094e6",
+            "value": "3000257_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000257_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "49531cf8-336c-4d51-b620-390464b633f4",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000257_check"
+          }
+        ],
+        "label": "Minimum no of Redis databases IAM Servcie ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_postgresql_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "b55db657-97ec-4d32-88e2-fad6ba183d14",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000258"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "44bfd269-8f96-4a44-a43e-2646af7b32a0",
+            "value": "3000258_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000258_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "5fe504ae-0e8d-4693-a2a3-2b70c7fd87ae",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000258_check"
+          }
+        ],
+        "label": "Minimum no of PostgreSQL databases IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_postgresql_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "34a17dc3-cea2-4a44-a3e0-0a64881fe2e6",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000259"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "cd36c154-ffe8-453a-8251-7b71bdcee887",
+            "value": "3000259_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000259_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "fed54b53-f30c-4a1a-9feb-9dcdca8853b5",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000259_check"
+          }
+        ],
+        "label": "Minimum no of PostgreSQL databases IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_mongo_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "fe0164e5-f123-4ec6-b61f-afb5296429c6",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000260"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "5881ccf6-4e1e-4bcf-94ed-bee1bf5639da",
+            "value": "3000260_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000260_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "9f3e00fa-e6f0-47a2-bdf4-8dff28dd6ba0",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000260_check"
+          }
+        ],
+        "label": "Minimum no of MongoDB IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_mongo_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "6a58e400-2e7f-4254-a4e8-59a3ca39f39a",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000261"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "9ab790c3-6a0c-472b-87a0-bfd4493895bf",
+            "value": "3000261_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000261_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "f631f434-9018-4349-97d4-a4c4e199a0a3",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000261_check"
+          }
+        ],
+        "label": "Minimum no of MongoDB IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_elastic_search_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "97ee292f-3614-423e-9418-052c3cb64369",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000262"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "b73e0095-61e8-4537-9874-83f6aed58aa8",
+            "value": "3000262_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000262_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "5bbbd42d-8a79-44e4-be84-bc8cf033dc92",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000262_check"
+          }
+        ],
+        "label": "Minimum no of Elastic Search IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_elastic_search_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "51e2b51b-4231-41e1-9284-5ebd666d1df0",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000263"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "2d5fd1c1-4ab5-4da4-9713-52720e6fc58d",
+            "value": "3000263_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000263_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "d487c838-57f0-4ec1-a91f-3fcb0c662448",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000263_check"
+          }
+        ],
+        "label": "Minimum no of Elastic Search IAM Servcie ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_etcd_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "40d9c6bf-f96a-47fe-b951-2a2158a1bdc4",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000264"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "09e2c00e-0f51-4635-a176-ce2a001a6a27",
+            "value": "3000264_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000264_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "c664c308-6e02-4f20-85b7-c8d8cec8f479",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000264_check"
+          }
+        ],
+        "label": "Minimum no of etcd IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_etcd_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "7c099470-36fa-4ac7-95ed-e09799243b16",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000265"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "84d7a33f-736d-4e43-acb8-6bc3956e97e6",
+            "value": "3000265_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000265_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "077cbbeb-6a00-4733-b064-ee6a1e7b7b4e",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000265_check"
+          }
+        ],
+        "label": "Minimum no of etcd IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_key",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "2c0e2483-b89b-4b42-9ecd-e1ffd7aeff62",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000266"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "415305a3-5be1-4d5c-8424-04dcaa3dc73c",
+            "value": "3000266_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000266_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "2f671c20-c637-4064-882c-2957eb9fc7be",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000266_check"
+          }
+        ],
+        "label": "Minimum no of Key IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_key",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "fe5099e2-0517-4e89-b72e-e39dae20d7dc",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000267"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "7d3e57cc-a9e6-4a0f-ada4-9cb479d837bc",
+            "value": "3000267_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000267_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "eb28be8d-0a9b-4f5d-a0f3-5366e892b830",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000267_check"
+          }
+        ],
+        "label": "Minimum no of Key IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_kubernetes_container",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "e83e604a-81c4-4164-a2bf-50b088b0e49a",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000268"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "559125b5-4b22-4bf6-8c7a-d47d93d4d340",
+            "value": "3000268_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000268_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "8bb9219e-88c6-4d58-9d4a-17d1d0d1fced",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000268_check"
+          }
+        ],
+        "label": "Minimum no of Kubernetes Container IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_kubernetes_container",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "ee217c92-7320-423c-b351-a0a55c19870f",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000269"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "03f7b729-91ee-471e-b443-1fcd1de08124",
+            "value": "3000269_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000269_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "ff63533a-e348-461d-bc34-e5a4f90efbbd",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000269_check"
+          }
+        ],
+        "label": "Minimum no of Kubernetes Container IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_enterprise_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "921d7326-a633-4c45-90ef-d751642dc62a",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000270"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "d32e41b1-ceb6-43b0-8fd6-90deea0124ae",
+            "value": "3000270_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000270_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "52544420-d6b2-458b-bf64-dc3d2d32290c",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000270_check"
+          }
+        ],
+        "label": "Minimum no of Enterprise DB IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_enterprise_db",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "985656b2-7e41-48b7-92fe-75b2c6b7a271",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000271"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "099932cd-368d-45f2-9112-3d20cf4e6023",
+            "value": "3000271_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000271_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "bcebe9d0-52c6-4eb8-b184-01a3232451ff",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000271_check"
+          }
+        ],
+        "label": "Minimum no of Enterprise DB IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_monitoring",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "6d878284-7f00-4d64-adaf-dc233595695d",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000315"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "eac45e2b-fa7d-4c9c-8008-c4b86a954b10",
+            "value": "3000315_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000315_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "66f3ce9e-526d-442e-b03d-c942af4179c5",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000315_check"
+          }
+        ],
+        "label": "Minimum no of Monitoring IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_monitoring",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "0acde667-4627-4258-affd-f803d4f78112",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000316"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "17a771e8-9f97-4ba7-aeea-57ceb97eb4d9",
+            "value": "3000316_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000316_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "c9b213e4-2e3e-4179-93eb-5fd49d4c2a7a",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000316_check"
+          }
+        ],
+        "label": "Minimum no of Monitoring IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_logdna",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "c2a59d4d-0d54-4edf-8a19-abdc7ed508c9",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000317"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "10482431-1ef2-425c-9b84-d280d0621b4b",
+            "value": "3000317_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000317_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "a1f0692b-24f0-486b-a136-711cc2391469",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000317_check"
+          }
+        ],
+        "label": "Minimum no of LogDNA IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_logdna",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "14061d18-9ea3-4e2a-9305-4082b47c40ab",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000318"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "d459b077-149f-495e-9414-658c87ba39f7",
+            "value": "3000318_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000318_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "3734f039-09ea-48d5-810c-193136e0b382",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000318_check"
+          }
+        ],
+        "label": "Minimum no of LogDNA IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_secrets_manager",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "4202a69a-c061-4849-9331-16ffadc0240f",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000631"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "a584d387-a39d-41d3-b304-b333d6eb52f3",
+            "value": "3000631_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000631_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "569bc690-58a9-48d4-a7b1-8137ad826629",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000631_check"
+          }
+        ],
+        "label": "Minimum no of Secrets Manager IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_secrets_manager",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "18479a46-0635-4479-96c3-af4749cbbbb2",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000632"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "3ff60e01-5b3a-43b9-830e-eff53e8acb9c",
+            "value": "3000632_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000632_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "d409955e-684e-4b9d-af17-31f9d036fe12",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000632_check"
+          }
+        ],
+        "label": "Minimum no of Secrets Manager IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_toolchain",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "24863e12-f17a-4d92-a5fe-45f3032251db",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000633"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "75fb79fc-d774-477d-8a0a-92b29d1fd09f",
+            "value": "3000633_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000633_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "991703e6-d066-4de1-a5cc-c7bd5a543aad",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000633_check"
+          }
+        ],
+        "label": "Minimum no of Toolchain IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_toolchain",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "c01cad1c-b8d1-4a3f-963a-b8e91f5c6bd2",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000634"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "88c083ba-cec7-4cb5-b399-9d5cc82c56ec",
+            "value": "3000634_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000634_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "f9a7acfb-3548-42fd-ba05-fa7105f813ca",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000634_check"
+          }
+        ],
+        "label": "Minimum no of Toolchain IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_managers_for_container_registry",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "4f83f336-1444-4f33-80f8-cf5b68483db5",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000635"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "82c08404-8aed-4041-a4e1-a4fec16eefdb",
+            "value": "3000635_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000635_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "ff87e9f1-bf25-4a35-9be7-684efe0bed67",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000635_check"
+          }
+        ],
+        "label": "Minimum no of Container Registry IAM managers",
+        "values": [
+          "3, []"
+        ]
+      },
+      {
+        "id": "no_of_service_id_managers_for_container_registry",
+        "class": "scc_check_parameter",
+        "props": [
+          {
+            "name": "scc_goal_version",
+            "uuid": "f2ff376f-6473-4378-8789-e05b65c137f9",
+            "value": "1.0",
+            "class": "scc_goal_version",
+            "remarks": "3000636"
+          },
+          {
+            "name": "scc_check_name_id",
+            "uuid": "7a9d46c6-6226-430d-9408-3437701aa9bc",
+            "value": "3000636_check",
+            "class": "scc_check_name_id",
+            "remarks": "3000636_check"
+          },
+          {
+            "name": "scc_check_version",
+            "uuid": "b28021b9-f3d7-45c3-99d0-b1b347c70531",
+            "value": "1.0",
+            "class": "scc_check_version",
+            "remarks": "3000636_check"
+          }
+        ],
+        "label": "Minimum no of Container Registry IAM Service ID managers",
+        "values": [
+          "3, []"
+        ]
+      }
+    ]
+  }
+}
