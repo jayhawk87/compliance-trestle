@@ -39,7 +39,9 @@ from trestle.oscal.component import Party
 from trestle.oscal.component import Property
 from trestle.oscal.component import Remarks
 from trestle.oscal.component import ResponsibleParty
+from trestle.oscal.component import ResponsibleRole
 from trestle.oscal.component import Role
+from trestle.oscal.component import SetParameter
 from trestle.tasks.base_task import TaskBase
 from trestle.tasks.base_task import TaskOutcome
 from trestle.utils.oscal_helper import CatalogHelper
@@ -123,6 +125,60 @@ class XslxToOscalComponentDefinition(TaskBase):
         # accumulators
         self.rows_missing_goal_name_id = []
         self.rows_missing_controls = []
+        self.rows_missing_parameters = []
+        self.rows_missing_parameters_values = []
+        # roles, parties, responsible-parties
+        roles = [
+            Role(id='prepared-by',title='Indicates the organization that created this content.'),
+            Role(id='prepared-for',title='Indicates the organization for which this content was created..'),
+            Role(id='content-approver',title='Indicates the organization responsible for all content represented in the "document".'),
+        ]
+        uuid01 = str(uuid.uuid4())
+        uuid02 = str(uuid.uuid4())
+        uuid03 = str(uuid.uuid4())
+        parties = [
+            Party(uuid=uuid01,
+                  type='organization',
+                  name='International Business Machines',
+                  remarks='IBM'),
+            Party(uuid=uuid02,
+                  type='organization',
+                  name='Customer',
+                  remarks='organization to be customized at account creation only for their Component Definition'),
+            Party(uuid=uuid03,
+                  type='organization',
+                  name='ISV',
+                  remarks='organization to be customized at ISV subscription only for their Component Definition'),
+        ]
+        prepared_by = ResponsibleParty(
+            party_uuids = [uuid01]
+        )
+        prepared_for = ResponsibleParty(
+            party_uuids = [uuid02, uuid03]
+        )
+        content_approver = ResponsibleParty(
+            party_uuids = [uuid01]
+        )
+        responsible_parties = { 
+            'prepared-by': prepared_by,
+            'prepared-for': prepared_for,
+            'content-approver': content_approver,
+        }
+        # responsible-roles
+        role_prepared_by = ResponsibleRole(
+            party_uuids=[uuid01]
+        )
+        role_prepared_for = ResponsibleRole(
+            party_uuids=[uuid02, uuid03]
+        )
+        role_content_approver = ResponsibleRole(
+            party_uuids=[uuid01]
+        )
+        responsible_roles = { 
+            'prepared-by': role_prepared_by,
+            'prepared-for': role_prepared_for,
+            'content-approver': role_content_approver,
+        }
         # process each row of spread sheet
         for row in self._row_generator(sheet_ranges):
             # quit when first row with no goal_id encountered
@@ -185,7 +241,8 @@ class XslxToOscalComponentDefinition(TaskBase):
             # implemented requirements
             implemented_requirements = []
             controls = self._get_controls(sheet_ranges, row)
-            goal_text = self._get_goal_text(sheet_ranges, row)
+            goal_remarks = self._get_goal_remarks(sheet_ranges, row)
+            parameter_value_default = self._get_parameter_value_default(sheet_ranges, row)
             for control in controls:
                 control_uuid = self._get_control_uuid(control)
                 prop1 = Property(
@@ -193,7 +250,7 @@ class XslxToOscalComponentDefinition(TaskBase):
                     class_='scc_goal_name_id',
                     value=goal_name_id,
                     ns='http://ibm.github.io/compliance-trestle/schemas/oscal/cd/ibm-cloud',
-                    remarks=Remarks(__root__=str(goal_text))
+                    remarks=Remarks(__root__=str(goal_remarks))
                 )
                 prop2 = Property(
                     name='goal_version',
@@ -211,8 +268,25 @@ class XslxToOscalComponentDefinition(TaskBase):
                     uuid=control_uuid,
                     description=control,
                     props=props,
-                    control_id=control_id
+                    control_id=control_id,
+                    responsible_roles=responsible_roles
                     )
+                parameter_name = self._get_parameter_name(sheet_ranges, row)
+                if parameter_name is None:
+                    if row not in self.rows_missing_parameters:
+                        self.rows_missing_parameters.append(row)
+                else:
+                    parameter_value_default = self._get_parameter_value_default(sheet_ranges, row)
+                    if parameter_value_default is None:
+                        if row not in self.rows_missing_parameters_values:
+                            self.rows_missing_parameters_values.append(row)
+                    else:
+                        values = list(parameter_value_default)
+                        set_parameter = SetParameter(values=values)
+                        set_parameters = {}
+                        #logger.info(f'use {row} {parameter_name} {values}')
+                        set_parameters[parameter_name] = set_parameter
+                        implemented_requirement.set_parameters = set_parameters
                 implemented_requirements.append(implemented_requirement)
             # control implementations
             control_implementation = ControlImplementation(
@@ -226,42 +300,6 @@ class XslxToOscalComponentDefinition(TaskBase):
             else:
                 defined_component.control_implementations.append(control_implementation)
         # create OSCAL ComponentDefinition
-        roles = [
-            Role(id='prepared-by',title='Indicates the organization that created this content.'),
-            Role(id='prepared-for',title='Indicates the organization for which this content was created..'),
-            Role(id='content-approver',title='Indicates the organization responsible for all content represented in the "document".'),
-        ]
-        uuid01 = str(uuid.uuid4())
-        uuid02 = str(uuid.uuid4())
-        uuid03 = str(uuid.uuid4())
-        parties = [
-            Party(uuid=uuid01,
-                  type='organization',
-                  name='International Business Machines',
-                  remarks='IBM'),
-            Party(uuid=uuid02,
-                  type='organization',
-                  name='Customer',
-                  remarks='organization to be customized at account creation only for their Component Definition'),
-            Party(uuid=uuid03,
-                  type='organization',
-                  name='ISV',
-                  remarks='organization to be customized at ISV subscription only for their Component Definition'),
-        ]
-        prepared_by = ResponsibleParty(
-            party_uuids = [uuid01]
-        )
-        prepared_for = ResponsibleParty(
-            party_uuids = [uuid02, uuid03]
-        )
-        content_approver = ResponsibleParty(
-            party_uuids = [uuid01]
-        )
-        responsible_parties = { 
-            'prepared-by': prepared_by,
-            'prepared-for': prepared_for,
-            'content-approver': content_approver,
-        }
         metadata = Metadata(
             title='Component definition for NIST profiles',
             last_modified=self._timestamp,
@@ -286,6 +324,10 @@ class XslxToOscalComponentDefinition(TaskBase):
             logger.info(f'rows missing goal_name_id: {self.rows_missing_goal_name_id}')
         if len(self.rows_missing_controls) > 0:
             logger.info(f'rows missing controls: {self.rows_missing_controls}')
+        if len(self.rows_missing_parameters) > 0:
+            logger.info(f'rows missing parameters: {self.rows_missing_parameters}')
+        if len(self.rows_missing_parameters_values) > 0:
+            logger.info(f'rows missing parameters values: {self.rows_missing_parameters_values}')
         # <hack>
         tdir = self._config.get('output-dir')
         tdir = tdir.replace('component-definitions','catalogs')
@@ -364,6 +406,9 @@ class XslxToOscalComponentDefinition(TaskBase):
             value = self._get_goal_id(sheet_ranges, row)
         return value
     
+    def _get_parameter_name(self, sheet_ranges, row):
+        return self._get_parameter_name_and_description(sheet_ranges, row)[0]
+    
     def _get_parameter_name_and_description(self, sheet_ranges, row):
         name = None
         description = None
@@ -383,6 +428,15 @@ class XslxToOscalComponentDefinition(TaskBase):
         value = name, description
         return value
     
+    def _get_parameter_value_default(self, sheet_ranges, row):
+        name = None
+        description = None
+        col = 'w'
+        value = sheet_ranges[col+str(row)].value
+        if value is not None:
+            value = str(value).split(',')[0].strip()
+        return value
+    
     def _get_parameter_values(self, sheet_ranges, row):
         name = None
         description = None
@@ -391,7 +445,19 @@ class XslxToOscalComponentDefinition(TaskBase):
         if value is None:
             raise RuntimeError(f'row {row} col {col} missing value')
         return value
-        
+    
+    def _get_goal_remarks(self, sheet_ranges, row):
+        goal_text = self._get_goal_text(sheet_ranges, row)
+        tokens = goal_text.split()
+        if tokens[0] != 'Check':
+            raise ValueError(f'{row},0 is {tokens[0]} expected "Check"')
+        if tokens[1] != 'whether':
+            raise ValueError(f'{row},1 expected "whether"')
+        tokens.pop(0)
+        tokens[0] = 'Ensure'
+        value = ' '.join(tokens)
+        return value
+    
     def _get_component_name(self, sheet_ranges, row):
         goal_text = self._get_goal_text(sheet_ranges, row)
         tokens = goal_text.split()
