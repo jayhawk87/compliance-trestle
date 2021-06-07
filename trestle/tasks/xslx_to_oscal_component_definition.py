@@ -42,6 +42,7 @@ from trestle.oscal.component import ResponsibleParty
 from trestle.oscal.component import ResponsibleRole
 from trestle.oscal.component import Role
 from trestle.oscal.component import SetParameter
+from trestle.oscal.component import Statement
 from trestle.tasks.base_task import TaskBase
 from trestle.tasks.base_task import TaskOutcome
 from trestle.utils.oscal_helper import CatalogHelper
@@ -264,12 +265,19 @@ class XslxToOscalComponentDefinition(TaskBase):
                 if control_id is None:
                     logger.info(f'row {row} control {control} not found in catalog')
                     control_id = control
+                statement_id = control_id
+                statement = Statement(
+                    uuid=str(uuid.uuid4()),
+                    description = f'{component_name} implements {statement_id}'
+                    )
+                statements = { statement_id: statement }
                 implemented_requirement = ImplementedRequirement(
                     uuid=control_uuid,
                     description=control,
                     props=props,
                     control_id=control_id,
-                    responsible_roles=responsible_roles
+                    responsible_roles=responsible_roles,
+                    statements=statements
                     )
                 parameter_name = self._get_parameter_name(sheet_ranges, row)
                 if parameter_name is None:
