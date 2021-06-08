@@ -22,8 +22,8 @@ import uuid
 from trestle.oscal.catalog import Catalog
 from trestle.oscal.catalog import Metadata
 from trestle.oscal.catalog import Parameter
+from trestle.oscal.catalog import ParameterGuideline
 from trestle.oscal.catalog import ParameterValue
-from trestle.oscal.catalog import Property
 
 logger = logging.getLogger(__name__)
 
@@ -31,24 +31,14 @@ logger = logging.getLogger(__name__)
 class ParameterHelper():
     """Parameter Helper class is a temporary hack because Component Definition does not support Parameters."""
 
-    def __init__(self, values, id, label, class_) -> None:
+    def __init__(self, values, id_, label, class_, usage, guidelines) -> None:
         """Initialize."""
-        self._props = []
         self._parameter_values = ParameterValue(__root__=str(values))
-        self._id = id
+        self._id = id_
         self._label = label
         self._class_ = class_
-
-    def add_property(self, name, value, class_, remarks):
-        """Add property."""
-        prop = Property(
-            uuid=str(uuid.uuid4()),
-            name=name,
-            value=value,
-            class_=class_,
-            remarks=remarks,
-        )
-        self._props.append(prop)
+        self._usage = usage
+        self._guidelines = ParameterGuideline(prose=guidelines)
 
     def get_parameter(self):
         """Get parameter."""
@@ -56,8 +46,9 @@ class ParameterHelper():
             id=self._id,
             label=self._label,
             class_=self._class_,
-            values=[self._parameter_values],
-            props=self._props,
+            usage=self._usage,
+            guidelines=[self._guidelines],
+            values=[self._parameter_values]
         )
         return parameter
 

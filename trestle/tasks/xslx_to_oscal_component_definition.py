@@ -213,30 +213,17 @@ class XslxToOscalComponentDefinition(TaskBase):
                 raise RuntimeError(f'component_name: {component_name}')
             # parameter
             parameter_name, parameter_description = self._get_parameter_name_and_description(sheet_ranges, row)
+            usage = self._get_parameter_usage(sheet_ranges, row)
             if parameter_name is not None:
+                values=self._get_parameter_values(sheet_ranges, row)
+                guidelines=self._get_guidelines(values)
                 parameter_helper = ParameterHelper(
-                    values=self._get_parameter_values(sheet_ranges, row),
-                    id=parameter_name,
+                    values=values,
+                    id_=parameter_name,
                     label=parameter_description,
                     class_='scc_check_parameter',
-                )
-                parameter_helper.add_property(
-                    name='scc_goal_version',
-                    value=self._get_goal_version(),
-                    class_='scc_goal_version',
-                    remarks=goal_name_id,
-                )
-                parameter_helper.add_property(
-                    name='scc_check_name_id',
-                    value=scc_check_name_id,
-                    class_='scc_check_name_id',
-                    remarks=scc_check_name_id,
-                )
-                parameter_helper.add_property(
-                    name='scc_check_version',
-                    value=self._get_check_version(),
-                    class_='scc_check_version',
-                    remarks=scc_check_name_id,
+                    usage=usage,
+                    guidelines=guidelines,
                 )
                 parameters[str(uuid.uuid4())] = parameter_helper.get_parameter()
             # implemented requirements
@@ -279,21 +266,17 @@ class XslxToOscalComponentDefinition(TaskBase):
                     responsible_roles=responsible_roles,
                     statements=statements
                     )
-                parameter_name = self._get_parameter_name(sheet_ranges, row)
                 if parameter_name is None:
                     if row not in self.rows_missing_parameters:
                         self.rows_missing_parameters.append(row)
                 else:
-                    parameter_value_default = self._get_parameter_value_default(sheet_ranges, row)
                     if parameter_value_default is None:
                         if row not in self.rows_missing_parameters_values:
                             self.rows_missing_parameters_values.append(row)
                     else:
-                        values = list(parameter_value_default)
+                        values = [ parameter_value_default ]
                         set_parameter = SetParameter(values=values)
-                        set_parameters = {}
-                        #logger.info(f'use {row} {parameter_name} {values}')
-                        set_parameters[parameter_name] = set_parameter
+                        set_parameters = { parameter_name: set_parameter }
                         implemented_requirement.set_parameters = set_parameters
                 implemented_requirements.append(implemented_requirement)
             # control implementations
@@ -452,7 +435,47 @@ class XslxToOscalComponentDefinition(TaskBase):
         value = sheet_ranges[col+str(row)].value
         if value is None:
             raise RuntimeError(f'row {row} col {col} missing value')
+        # massage into comma separated list of values
+        value = str(value).strip().replace(' ','')
+        value = value.replace(',[]','')
+        value = value.replace('[','')
+        value = value.replace(']','')
         return value
+    
+    def _get_guidelines(self, values):
+        type = self._get_type(values)
+        value = f'The first listed value option is set by default in the system unless set-parameter is used to satisfy a control requirements. Type {type}.'
+        return value
+    
+    def _get_type(self, values):
+        if self._is_int(values):
+            value = 'Integer'
+        elif self._is_float(values):
+            value = 'Float'
+        else:
+            value = 'String'
+        return value
+        
+    def _is_int(self, values):
+        try:
+            for value in values.split(','):
+                int(value)
+            retval = True
+        except:
+            retval = False
+        return retval
+    
+    def _is_float(self, values):
+        try:
+            for value in values.split(','):
+                float(value)
+            retval = True
+        except:
+            retval = False
+        return retval
+    
+    def _get_parameter_usage(self, sheet_ranges, row):
+        return self._get_goal_remarks(sheet_ranges, row)
     
     def _get_goal_remarks(self, sheet_ranges, row):
         goal_text = self._get_goal_text(sheet_ranges, row)
