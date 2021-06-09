@@ -188,7 +188,7 @@ class XslxToOscalComponentDefinition(TaskBase):
             if goal_name_id is None:
                 continue
             controls = self._get_controls(sheet_ranges, row)
-            if len(controls) == 0:
+            if len(controls.keys()) == 0:
                 continue
             scc_check_name_id = str(goal_name_id)+'_check'
             # component
@@ -219,19 +219,18 @@ class XslxToOscalComponentDefinition(TaskBase):
                 guidelines=self._get_guidelines(values)
                 parameter_helper = ParameterHelper(
                     values=values,
-                    id_=parameter_name,
+                    id_=parameter_name, 
                     label=parameter_description,
-                    class_='scc_check_parameter',
+                    class_='http://ibm.github.io/compliance-trestle/schemas/oscal/cd/'+component_name.replace(' ','%20'),
                     usage=usage,
                     guidelines=guidelines,
                 )
                 parameters[str(uuid.uuid4())] = parameter_helper.get_parameter()
             # implemented requirements
             implemented_requirements = []
-            controls = self._get_controls(sheet_ranges, row)
             goal_remarks = self._get_goal_remarks(sheet_ranges, row)
             parameter_value_default = self._get_parameter_value_default(sheet_ranges, row)
-            for control in controls:
+            for control in controls.keys():
                 control_uuid = self._get_control_uuid(control)
                 prop1 = Property(
                     name='goal_name_id',
@@ -252,20 +251,27 @@ class XslxToOscalComponentDefinition(TaskBase):
                 if control_id is None:
                     logger.info(f'row {row} control {control} not found in catalog')
                     control_id = control
-                statement_id = control_id
-                statement = Statement(
-                    uuid=str(uuid.uuid4()),
-                    description = f'{component_name} implements {statement_id}'
-                    )
-                statements = { statement_id: statement }
+                # implemented_requirement
                 implemented_requirement = ImplementedRequirement(
                     uuid=control_uuid,
                     description=control,
                     props=props,
                     control_id=control_id,
                     responsible_roles=responsible_roles,
-                    statements=statements
                     )
+                # statements
+                control_statements = controls[control]
+                if len(control_statements) > 0:
+                    statements = {}
+                    for control_statement in control_statements:
+                        statement_id = control+control_statement
+                        statement = Statement(
+                            uuid=str(uuid.uuid4()),
+                            description = f'{component_name} implements {statement_id}'
+                        )
+                        statements[statement_id] = statement
+                    implemented_requirement.statements = statements
+                # set_parameters
                 if parameter_name is None:
                     if row not in self.rows_missing_parameters:
                         self.rows_missing_parameters.append(row)
@@ -278,6 +284,7 @@ class XslxToOscalComponentDefinition(TaskBase):
                         set_parameter = SetParameter(values=values)
                         set_parameters = { parameter_name: set_parameter }
                         implemented_requirement.set_parameters = set_parameters
+                # implemented_requirements
                 implemented_requirements.append(implemented_requirement)
             # control implementations
             control_implementation = ControlImplementation(
@@ -368,7 +375,7 @@ class XslxToOscalComponentDefinition(TaskBase):
         return value
     
     def _get_controls(self, sheet_ranges, row):
-        value = []
+        value = {}
         for col in ['h', 'i', 'j', 'k', 'l', 'm', 'n']:
             control = sheet_ranges[col+str(row)].value
             if control is not None:
@@ -377,15 +384,23 @@ class XslxToOscalComponentDefinition(TaskBase):
                     if ':' in control:
                         control = control.split(':')[0]
                     # remove alphabet part of control
+                    statements = []
                     for i in ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o''p','q','r','s','t','u','v','w','x','y','z']:
                         needle = '('+i+')'
-                        control = control.replace(needle,'')
+                        if needle in control:
+                            statements.append(needle)
+                            control = control.replace(needle,'')
                     control = control.lower()
                     # skip bogus control made up if dashes only
-                    if len(control.replace('-','')) > 0:
-                        if control not in value:
-                            value.append(control)
-        if len(value) == 0:
+                    if len(control.replace('-','')) == 0:
+                        continue
+                    if control not in value.keys():
+                        value[control] = statements
+                    else:
+                        for statement in statements:
+                            if statement not in value[control]:
+                                value[control].append(statement)
+        if len(value.keys()) == 0:
             self.rows_missing_controls.append(row)
         return value
         

@@ -1,16 +1,16 @@
 {
   "catalog": {
-    "uuid": "882c0ca4-ffad-40ad-bac5-01c41d9ca59d",
+    "uuid": "ec21b1a6-0f59-4f5c-8544-85964f4c9b41",
     "metadata": {
       "title": "Component Parameters",
-      "last-modified": "2021-06-08T12:55:42.000+00:00",
+      "last-modified": "2021-06-09T11:36:24.000+00:00",
       "version": "0.14.1",
       "oscal-version": "1.0.0-rc2"
     },
     "params": [
       {
         "id": "ibm_minimum_password_length",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IBMid",
         "label": "Minimum Password Length",
         "usage": "Ensure IBMid password policy requires minimum length of 12 characters",
         "guidelines": [
@@ -24,7 +24,7 @@
       },
       {
         "id": "ibm_password_reuse_prevention",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IBMid",
         "label": "Password Reuse Prevention",
         "usage": "Ensure IBMid password policy prevents password reuse below the minimum of #.",
         "guidelines": [
@@ -38,7 +38,7 @@
       },
       {
         "id": "allowed_admins_per_account",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IAM",
         "label": "Maximum allowed administrators per account",
         "usage": "Ensure there are no more than # IAM administrators configured per account",
         "guidelines": [
@@ -52,7 +52,7 @@
       },
       {
         "id": "api_keys_rotated_days",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IAM",
         "label": "API Keys Rotated Days",
         "usage": "Ensure IBM Cloud API keys that are managed in IAM are rotated at least every # days",
         "guidelines": [
@@ -66,7 +66,7 @@
       },
       {
         "id": "account_owner_last_login_days",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IAM",
         "label": "Account Owner Last Login Days",
         "usage": "Ensure an account owner has logged in to IBM Cloud in the past # days",
         "guidelines": [
@@ -80,7 +80,7 @@
       },
       {
         "id": "no_of_admins_for_iam",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IAM",
         "label": "Maximum no of IAM user administrators",
         "usage": "Ensure IAM-enabled services have no more than # users with the IAM administrator role",
         "guidelines": [
@@ -94,7 +94,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_iam",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IAM",
         "label": "Maximum no of IAM Service ID administrators",
         "usage": "Ensure IAM-enabled services have no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -108,7 +108,7 @@
       },
       {
         "id": "no_of_admins_for_cloudant_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Cloudant",
         "label": "Maximum no of Cloudant DB user administrators",
         "usage": "Ensure Cloudant has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -122,7 +122,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_cloudant_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Cloudant",
         "label": "Maximum no of Cloudant DB Service IDs administrators",
         "usage": "Ensure Cloudant has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -136,7 +136,7 @@
       },
       {
         "id": "hpcs_crypto_units",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Hyper%20Protect%20Crypto%20Services",
         "label": "Hyper Protect Crypto Units",
         "usage": "Ensure Hyper Protect Crypto Services instance has at least # crypto units",
         "guidelines": [
@@ -150,7 +150,7 @@
       },
       {
         "id": "hpcs_rotation_policy",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Hyper%20Protect%20Crypto%20Services",
         "label": "Hyper Protect Crypto Keys Rotation Policy",
         "usage": "Ensure Hyper Protect Crypto Services encryption keys have an automatic rotation policy that is set to at least # months",
         "guidelines": [
@@ -164,7 +164,7 @@
       },
       {
         "id": "no_of_admins_for_redis_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20Redis",
         "label": "Maximum no of Redis DB user administrators",
         "usage": "Ensure Databases for Redis has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -178,7 +178,7 @@
       },
       {
         "id": "no_of_admins_for_postgresql_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20PostreSQL",
         "label": "Maximum no of Postgresql DB user administrators",
         "usage": "Ensure Databases for PostreSQL has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -192,7 +192,7 @@
       },
       {
         "id": "no_of_admins_for_mongo_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20MongoDB",
         "label": "Maximum no of Mongo DB user administrators",
         "usage": "Ensure Databases for MongoDB has no more than # users with the IAM administrator",
         "guidelines": [
@@ -206,7 +206,7 @@
       },
       {
         "id": "no_of_admins_for_elastic_search_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20Elasticsearch",
         "label": "Maximum no of Elastic Search DB user administrators",
         "usage": "Ensure Databases for Elasticsearch has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -220,7 +220,7 @@
       },
       {
         "id": "no_of_admins_for_etcd_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20etcd",
         "label": "Maximum no of ETCD user administrators",
         "usage": "Ensure Databases for etcd has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -234,7 +234,7 @@
       },
       {
         "id": "no_of_admins_for_key",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Key%20Protect",
         "label": "Maximum no of Key user administrators",
         "usage": "Ensure Key Protect has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -248,7 +248,7 @@
       },
       {
         "id": "no_of_admins_for_kubernetes_container",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Kubernetes%20Service",
         "label": "Maximum no of Kubernetes Container user administrators",
         "usage": "Ensure Kubernetes Service has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -262,7 +262,7 @@
       },
       {
         "id": "no_of_admins_for_enterprise_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20EnterpriseDB",
         "label": "Maximum no of Enterprise DB user administrators",
         "usage": "Ensure Databases for EnterpriseDB has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -276,7 +276,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_elastic_search_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20Elasticsearch",
         "label": "Maximum no of Elastic Search DB Service ID administrators",
         "usage": "Ensure Databases for Elasticsearch has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -290,7 +290,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_key",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Key%20Protect",
         "label": "Maximum no of Key Service ID administrators",
         "usage": "Ensure Key Protect has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -304,7 +304,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_etcd_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20etcd",
         "label": "Maximum no of ETCD Service ID administrators",
         "usage": "Ensure Databases for etcd has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -318,7 +318,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_kubernetes_container",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Kubernetes%20Service",
         "label": "Maximum no of Kubernetes Container Service ID administrators",
         "usage": "Ensure Kubernetes Service has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -332,7 +332,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_enterprise_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20EnterpriseDB",
         "label": "Maximum no of Enterprise DB Service ID  administrators",
         "usage": "Ensure Databases for EnterpriseDB has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -346,7 +346,7 @@
       },
       {
         "id": "no_of_admins_for_monitoring",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Event%20Streams",
         "label": "Maximum no of Monitoring user administrators",
         "usage": "Ensure Event Streams has no more than # users with the IAM administrator role assigned to monitor metrics",
         "guidelines": [
@@ -360,7 +360,7 @@
       },
       {
         "id": "no_of_admins_for_logdna",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IBM%20Activity%20Tracker",
         "label": "Maximum no of LogDNA user administrators",
         "usage": "Ensure IBM Activity Tracker has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -374,7 +374,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_logdna",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IBM%20Activity%20Tracker",
         "label": "Maximum no of LogDNA ServiceID administrators",
         "usage": "Ensure IBM Activity Tracker has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -388,7 +388,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_monitoring",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IBM%20Cloud%20Monitoring",
         "label": "Maximum no of Monitoring Service ID administrators",
         "usage": "Ensure IBM Cloud Monitoring has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -402,7 +402,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_mongo_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20MongoDB",
         "label": "Maximum no of Mongo DB Service ID administrators",
         "usage": "Ensure Databases for MongoDB has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -416,7 +416,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_redis_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20Redis",
         "label": "Maximum no of Redis DB Service ID administrators",
         "usage": "Ensure Databases for Redis has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -430,7 +430,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_postgresql_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20PostgreSQL",
         "label": "Maximum no of Postgresql DB Service ID administrators",
         "usage": "Ensure Databases for PostgreSQL has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -444,7 +444,7 @@
       },
       {
         "id": "ssh_port",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Virtual%20Private%20Cloud",
         "label": "SSH Port",
         "usage": "Ensure Virtual Private Cloud (VPC) security groups have no inbound rules that specify source IP 0.0.0.0/0 to SSH port 22",
         "guidelines": [
@@ -458,7 +458,7 @@
       },
       {
         "id": "rdp_port",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Virtual%20Private%20Cloud",
         "label": "RDP Port",
         "usage": "Ensure Virtual Private Cloud (VPC) security groups have no inbound rules that specify source IP 0.0.0.0/0 to RDP ports 3389",
         "guidelines": [
@@ -472,7 +472,7 @@
       },
       {
         "id": "iks_ingress_tls_versions",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Kubernetes%20Service",
         "label": "tlsVersion",
         "usage": "Ensure Kubernetes Service Ingress is configured only with TLS v1.2 for all inbound traffic",
         "guidelines": [
@@ -486,7 +486,7 @@
       },
       {
         "id": "diffie_hellman_group",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/VPN",
         "label": "Diffie-Hellman Group",
         "usage": "Ensure VPN for VPC has a Diffie-Hellman group set to at least group #",
         "guidelines": [
@@ -500,7 +500,7 @@
       },
       {
         "id": "pre_shared_key",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/VPN",
         "label": "Pre-Shared Key",
         "usage": "Ensure VPN for VPC authentication is configured with a strong pre-shared key with at least 24 alphanumeric characters",
         "guidelines": [
@@ -514,7 +514,7 @@
       },
       {
         "id": "dns_port",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Security%20Groups",
         "label": "DNS Port",
         "usage": "Ensure Security Groups for VPC contains no outbound rules in security groups that specify source IP 8.8.8.8/32 to DNS port 53",
         "guidelines": [
@@ -528,7 +528,7 @@
       },
       {
         "id": "vm_nic_count",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Virtual%20Servers",
         "label": "VM NIC Count",
         "usage": "Ensure Virtual Servers for VPC instance has the minimum # interfaces",
         "guidelines": [
@@ -542,7 +542,7 @@
       },
       {
         "id": "scan_interval_max",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Vulnerability%20Advisor",
         "label": "Max Scan Interval Days",
         "usage": "Ensure Vulnerability Advisor scans for critical or high vulnerabilities in the system (containers) at least every # day(s)",
         "guidelines": [
@@ -556,7 +556,7 @@
       },
       {
         "id": "arbitrary_keys_rotated_days",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Secrets%20Manager",
         "label": "Arbitrary Keys Rotated Days",
         "usage": "Ensure Secrets Manager arbitrary secrets are rotated at least every # days",
         "guidelines": [
@@ -570,7 +570,7 @@
       },
       {
         "id": "username_password_keys_rotated_days",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Secrets%20Manager",
         "label": "IAM credentials Keys Rotated Days",
         "usage": "Ensure Secrets Manager user credentials are rotated at least every # days",
         "guidelines": [
@@ -584,7 +584,7 @@
       },
       {
         "id": "iam_credentials_keys_rotated_days",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Secrets%20Manager",
         "label": "maxAPIKeyAge",
         "usage": "Ensure Secrets Manager user credentials are rotated at least every # days",
         "guidelines": [
@@ -598,7 +598,7 @@
       },
       {
         "id": "no_of_admins_for_secrets_manager",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Secrets%20Manager",
         "label": "Maximum no of Secrets Manager user administrators",
         "usage": "Ensure Secrets Manager has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -612,7 +612,7 @@
       },
       {
         "id": "no_of_admins_for_toolchain",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Continuous%20Delivery",
         "label": "Maximum no of Toolchain user administrators",
         "usage": "Ensure Continuous Delivery has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -626,7 +626,7 @@
       },
       {
         "id": "no_of_admins_for_container_registry",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Container%20Registry",
         "label": "Maximum no of Kubernetes Container user administrators",
         "usage": "Ensure Container Registry has no more than # users with the IAM administrator role",
         "guidelines": [
@@ -640,7 +640,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_container_registry",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Container%20Registry",
         "label": "Maximum no of Kubernetes Container Service ID administrators",
         "usage": "Ensure Container Registry has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -654,7 +654,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_tool_chain",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Continuous%20Delivery",
         "label": "Maximum no of Toolchain Service ID administrators",
         "usage": "Ensure Continuous Delivery has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -668,7 +668,7 @@
       },
       {
         "id": "no_of_service_id_admins_for_secrets_manager",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Secrets%20Manager",
         "label": "Maximum no of Secrets Manager Service ID administrators",
         "usage": "Ensure Secrets Manager has no more than # service IDs with the IAM administrator role",
         "guidelines": [
@@ -682,7 +682,7 @@
       },
       {
         "id": "access_tokens_expire",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/App%20ID",
         "label": "Access Tokens Expire Minutes",
         "usage": "Ensure App ID access tokens are configured to expire within # minutes",
         "guidelines": [
@@ -696,7 +696,7 @@
       },
       {
         "id": "ssh_port",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Virtual%20Private%20Cloud",
         "label": "SSH Port",
         "usage": "Ensure no VPC access control lists allow ingress from 0.0.0.0/0 to port 22",
         "guidelines": [
@@ -710,7 +710,7 @@
       },
       {
         "id": "rdp_port",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Virtual%20Private%20Cloud",
         "label": "RDP Port",
         "usage": "Ensure no VPC access control lists allow ingress from 0.0.0.0/0 to port 3389",
         "guidelines": [
@@ -724,7 +724,7 @@
       },
       {
         "id": "iam_service_ids_max_count",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IAM",
         "label": "Maximum allowed service ID with admin privilege per account",
         "usage": "Ensure account has no more than # service IDs with admin privileges",
         "guidelines": [
@@ -738,7 +738,7 @@
       },
       {
         "id": "no_of_managers_for_iam",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IAM",
         "label": "Minimum no of IAM managers",
         "usage": "Ensure IAM-enabled services have at least # users with the IAM manager role",
         "guidelines": [
@@ -752,7 +752,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_iam",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IAM",
         "label": "Minimum no of IAM Service ID managers",
         "usage": "Ensure IAM-enabled services have at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -766,7 +766,7 @@
       },
       {
         "id": "no_of_managers_for_cloudant_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Cloudant",
         "label": "Minimum no of Cloudant database IAM managers",
         "usage": "Ensure Cloudant has at least # users with the IAM manager role",
         "guidelines": [
@@ -780,7 +780,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_cloudant_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Cloudant",
         "label": "Minimum no of Cloudant database IAM Service ID managers",
         "usage": "Ensure Cloudant has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -794,7 +794,7 @@
       },
       {
         "id": "no_of_managers_for_redis_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20Redis",
         "label": "Minimum no of Redis databases IAM managers",
         "usage": "Ensure Databases for Redis has least # users with the IAM manager role",
         "guidelines": [
@@ -808,7 +808,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_redis_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20Redis",
         "label": "Minimum no of Redis databases IAM Servcie ID managers",
         "usage": "Ensure Databases for Redis has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -822,7 +822,7 @@
       },
       {
         "id": "no_of_managers_for_postgresql_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20PostreSQL",
         "label": "Minimum no of PostgreSQL databases IAM managers",
         "usage": "Ensure Databases for PostreSQL has at least # users with the IAM manager role",
         "guidelines": [
@@ -836,7 +836,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_postgresql_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20PostgreSQL",
         "label": "Minimum no of PostgreSQL databases IAM Service ID managers",
         "usage": "Ensure Databases for PostgreSQL has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -850,7 +850,7 @@
       },
       {
         "id": "no_of_managers_for_mongo_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20MongoDB",
         "label": "Minimum no of MongoDB IAM managers",
         "usage": "Ensure Databases for MongoDB has at least # users with the IAM manager role",
         "guidelines": [
@@ -864,7 +864,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_mongo_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20MongoDB",
         "label": "Minimum no of MongoDB IAM Service ID managers",
         "usage": "Ensure Databases for MongoDB has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -878,7 +878,7 @@
       },
       {
         "id": "no_of_managers_for_elastic_search_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20Elasticsearch",
         "label": "Minimum no of Elastic Search IAM managers",
         "usage": "Ensure Databases for Elasticsearch has at least # users with the IAM manager role",
         "guidelines": [
@@ -892,7 +892,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_elastic_search_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20Elasticsearch",
         "label": "Minimum no of Elastic Search IAM Servcie ID managers",
         "usage": "Ensure Databases for Elasticsearch has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -906,7 +906,7 @@
       },
       {
         "id": "no_of_managers_for_etcd_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20etcd",
         "label": "Minimum no of etcd IAM managers",
         "usage": "Ensure Databases for etcd has at least # users with the IAM manager role",
         "guidelines": [
@@ -920,7 +920,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_etcd_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20etcd",
         "label": "Minimum no of etcd IAM Service ID managers",
         "usage": "Ensure Databases for etcd has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -934,7 +934,7 @@
       },
       {
         "id": "no_of_managers_for_key",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Key%20Protect",
         "label": "Minimum no of Key IAM managers",
         "usage": "Ensure Key Protect has at least # users with the IAM manager role",
         "guidelines": [
@@ -948,7 +948,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_key",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Key%20Protect",
         "label": "Minimum no of Key IAM Service ID managers",
         "usage": "Ensure Key Protect has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -962,7 +962,7 @@
       },
       {
         "id": "no_of_managers_for_kubernetes_container",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Kubernetes%20Service",
         "label": "Minimum no of Kubernetes Container IAM managers",
         "usage": "Ensure Kubernetes Service has at least # users with the IAM manager role",
         "guidelines": [
@@ -976,7 +976,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_kubernetes_container",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Kubernetes%20Service",
         "label": "Minimum no of Kubernetes Container IAM Service ID managers",
         "usage": "Ensure Kubernetes Service has least # service IDs with the IAM manager role",
         "guidelines": [
@@ -990,7 +990,7 @@
       },
       {
         "id": "no_of_managers_for_enterprise_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20EnterpriseDB",
         "label": "Minimum no of Enterprise DB IAM managers",
         "usage": "Ensure Databases for EnterpriseDB has at least # users with the IAM manager role",
         "guidelines": [
@@ -1004,7 +1004,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_enterprise_db",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Databases%20for%20EnterpriseDB",
         "label": "Minimum no of Enterprise DB IAM Service ID managers",
         "usage": "Ensure Databases for EnterpriseDB has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -1018,7 +1018,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_monitoring",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IBM%20Cloud%20Monitoring",
         "label": "Minimum no of Monitoring IAM Service ID managers",
         "usage": "Ensure IBM Cloud Monitoring has at least # users with the IAM manager role",
         "guidelines": [
@@ -1032,7 +1032,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_monitoring",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IBM%20Cloud%20Monitoring",
         "label": "Minimum no of Monitoring IAM Service ID managers",
         "usage": "Ensure IBM Cloud Monitoring has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -1046,7 +1046,7 @@
       },
       {
         "id": "no_of_managers_for_logdna",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IBM%20Activity%20Tracker",
         "label": "Minimum no of LogDNA IAM managers",
         "usage": "Ensure IBM Activity Tracker has at least # users with the IAM manager role",
         "guidelines": [
@@ -1060,7 +1060,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_logdna",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/IBM%20Activity%20Tracker",
         "label": "Minimum no of LogDNA IAM Service ID managers",
         "usage": "Ensure IBM Activity Tracker has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -1074,7 +1074,7 @@
       },
       {
         "id": "no_of_managers_for_secrets_manager",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Secrets%20Manager",
         "label": "Minimum no of Secrets Manager IAM managers",
         "usage": "Ensure Secrets Manager has at least # users with the IAM manager role",
         "guidelines": [
@@ -1088,7 +1088,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_secrets_manager",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Secrets%20Manager",
         "label": "Minimum no of Secrets Manager IAM Service ID managers",
         "usage": "Ensure Secrets Manager has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -1102,7 +1102,7 @@
       },
       {
         "id": "no_of_managers_for_toolchain",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Continuous%20Delivery",
         "label": "Minimum no of Toolchain IAM managers",
         "usage": "Ensure Continuous Delivery has at least # users with the IAM manager role",
         "guidelines": [
@@ -1116,7 +1116,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_toolchain",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Continuous%20Delivery",
         "label": "Minimum no of Toolchain IAM Service ID managers",
         "usage": "Ensure Continuous Delivery has at least # service IDs with the IAM manager role",
         "guidelines": [
@@ -1130,7 +1130,7 @@
       },
       {
         "id": "no_of_managers_for_container_registry",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Container%20Registry",
         "label": "Minimum no of Container Registry IAM managers",
         "usage": "Ensure Container Registry has at least # users with the IAM manager role",
         "guidelines": [
@@ -1144,7 +1144,7 @@
       },
       {
         "id": "no_of_service_id_managers_for_container_registry",
-        "class": "scc_check_parameter",
+        "class": "http://ibm.github.io/compliance-trestle/schemas/oscal/cd/Container%20Registry",
         "label": "Minimum no of Container Registry IAM Service ID managers",
         "usage": "Ensure Container Registry has at least # service IDs with the IAM manager role",
         "guidelines": [
